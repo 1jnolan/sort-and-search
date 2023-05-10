@@ -1,0 +1,163 @@
+#SEE PAGE 212 
+#*******************************************
+# option 1:LINEAR SEARCH
+#*******************************************
+myList = [85, 24, 63, 45, 17, 31, 96, 50]
+key=17
+for index in range(len(myList)):
+    if myList[index]==key:
+        location=index
+print("Key was found at:",location)
+"""
+Works with this list. But if more than 1 of the number being
+searched for, what would happen? What if it wasnt there?
+
+Here is a solution to this problem:
+"""
+#Linear Search - alternative method using a function
+#myList = [85, 24, 63, 45, 17, 31, 96, 50]
+# def linearSearch(listIn, key):
+#     for index in range (len(listIN)):
+#         of listIn[index]==key:
+#             return index
+#     return -1
+# print (linearSearch (myList, 17)
+
+#*************************************************
+#*************************************************
+
+#Option 2 Binary Search
+# myList=[17,24,31,45,50,63,85,96]
+# def binarySearchLoop (listIn, key):
+#     first=0
+#     last=len(listIn)-1
+#     while (last-first)>=0:
+#         middle=first+((last-first)//2)
+#         if listIn[middle]=key:
+#             return middle
+#         elif key < lisIn[middle]:
+#             last=middle-1
+#         else:
+#             first=middle+1
+#     return -1
+# print (binarySearchLoop(myList, 17))
+
+#*************************************************
+#SORTING ALGORITHMS
+#*************************************************
+#SELECTION SORT
+#*************************************************
+# myList = [85, 24, 63, 45, 17, 31, 96, 50]
+# for index in range (len(myList)-1):
+#     print(myList)
+#     nextMinValue=min(myList[index+1:])
+#     if nextMinValue < myList[index]:
+#         nextMinIndex=
+#         myList.index(nextMinValue)
+#         myList[nextMinIndex]=
+#         myList[index]
+#         myList[index]=nextMinValue
+# print (myList)
+
+"""The above uses the min() function. The next example will
+use a loop instead"""
+# myList = [85, 24, 63, 45, 17, 31, 96, 50]
+# for index in range (len(myList)-1):
+#     print(myList)
+#     nextMinValue=myList[index+1]
+#     for unsortedIndex in range(index+1, len(myList)):
+#         if myLIst[unsortedIndex] <nextMinValue:
+#             nextMinValue=myList[unsortedIndex]
+#     nextMinValue=min(myList[index+1:])
+#     if nextMinValue < myList[index]:
+#         nextMinIndex=
+#         myList.index(nextMinValue)
+#         myList[nextMinIndex]=
+#         myList[index]
+#         myList[index]=nextMinValue
+# print (myList)     
+
+#****************************************************
+#INSERTION SORT
+#****************************************************
+# myList = [85, 24, 63, 45, 17, 31, 96, 50]
+# for index in range(1, len(myList)):
+#     print(myList)
+#     itemInsert=myList[index]
+#     position=index
+#     while position >0 and myList[position-1]>itemInsert:
+#         myList[position]=myList[position -1]
+#         position-=1
+#     myList[position]=itemInsert
+# print (myList)
+
+#*****************************************************
+#Bubble Sort
+#****************************************************
+# myList = [85, 24, 63, 45, 17, 31, 96, 50]
+# for outerIndex in range(len(myList)-1):
+#     print(myList)
+#     for index in range(len(myList)-1):
+#         if myList[index]>myList[index+1]:
+#             tempValue=myList[index]
+#             myList[index]=mylist[index+1]
+#             myList[index+1]=tempValue
+# print(myList)
+
+#***************************************************
+#Quicksort
+#***************************************************
+# myList = [85, 24, 63, 45, 17, 31, 96, 50]
+# def quickSort(listIn):
+#     if len(listIn)>1:
+#         pivot=listIn[len(listIn)-1]
+#         belowPiv=[]
+#         for item in listIn[:len(listIn)-1]:
+#             if item < pivot:
+#                 belowPiv.append(item)
+#         abovePiv=[]
+#         for item in listIn[:len(listIn)-1]:
+#             if item >=pivot:
+#                 abovePiv.append(item)
+#         return quickSort(belowPiv)+quicksort(abovePiv)
+#     else:
+#         return listIn
+# print(quickSort(myList))
+        
+"""
+
+def quicksort(listin):
+  if len(listin) > 1:
+    pivot = listin[len(listin) - 1]
+    belowpiv = []
+    for items in listin[:len(listin) - 1]:
+      if items < pivot:
+        belowpiv.append(items)
+    abovepiv = []
+    for items in listin[:len(listin) - 1]:
+      if items >= pivot:
+        abovepiv.append(items)
+    return quicksort(belowpiv) + [pivot] + quicksort(abovepiv)
+  else:
+    return listin
+
+
+print(quicksort(mylist))
+
+
+mylist = [17, 24, 31, 45, 50, 63, 85, 96]
+def binarySearchLoop(listIn, key):
+    first = 0
+    last = len(listIn) - 1
+    while (last - first) >= 0:
+        middle = first + ((last - first) //2)
+        if listIn[middle] == key:
+            return middle
+        elif key < listIn[middle]:
+            last = middle - 1
+        else:
+            first = middle + 1
+    return -1
+print(binarySearchLoop(mylist, 17))
+
+"""
